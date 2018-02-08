@@ -1,6 +1,7 @@
 // import express
 const express = require('express');
-const hbs = require('hbs')
+const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 
 // create app reference to express
 var app = express();
@@ -72,8 +73,9 @@ app.get('/bad', (req, res) => {
 
 // set up port for server with listen
 // with callback
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+// need to change out var 
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`)
 })
 
 
